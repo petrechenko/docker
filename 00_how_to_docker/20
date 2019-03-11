@@ -1,0 +1,5 @@
+# Create a local swarm, the Char virtual machine should be its manager
+
+docker swarm init --advertise-addr $(docker-machine ip Char)
+
+# Docker Swarm is a clustering and scheduling tool for Docker containers. With Swarm, IT administrators and developers can establish and manage a cluster of Docker nodes as a single virtual system

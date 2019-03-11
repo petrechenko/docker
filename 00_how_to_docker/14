@@ -1,0 +1,6 @@
+# Launch a wordpress container as a background task, just for fun. The container should be named lair, its 80 port should be bound to the 8080 po# rt of the virtual machine, and it should be able to use the spawning-pool container as a database service. You can try to access lair on your m# achine via a web browser, with the IP address of the virtual machine as a URL.
+# Congratulations, you just deployed a functional Wordpress website in two com- mands!
+
+docker run -d --name lair -p 8080:80 --link spawning-pool:mysql wordpress
+
+# Links allow containers to discover each other and securely transfer information about one container to another container. When you set up a link, you create a conduit between a source container and a recipient container. The recipient can then access select data about the source. To create a link, you use the --link flag

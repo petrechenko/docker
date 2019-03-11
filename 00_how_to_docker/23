@@ -1,0 +1,6 @@
+# Create an overlay-type internal network that you will name overmind
+
+docker network create -d overlay overmind
+
+# docker network ls to check
+# -d, --driver string — Driver to manage the Network (default "bridge")
